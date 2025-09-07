@@ -5,6 +5,7 @@ import Stats from "./components/Stats";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState("all");
 
   const addTodo = (text) => {
     const newTodo = {
@@ -27,11 +28,31 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  // 🔥 Filtro dinámico
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === "completed") return todo.completed;
+    if (filter === "pending") return !todo.completed;
+    return true; // all
+  });
+
   return (
     <div>
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+
+      {/* Botones de filtro */}
+      <div>
+        <button onClick={() => setFilter("all")}>Todas</button>
+        <button onClick={() => setFilter("pending")}>Pendientes</button>
+        <button onClick={() => setFilter("completed")}>Completadas</button>
+      </div>
+
+      <TodoList
+        todos={filteredTodos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+      />
+
       <Stats todos={todos} />
     </div>
   );

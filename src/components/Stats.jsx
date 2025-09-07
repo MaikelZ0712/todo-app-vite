@@ -1,9 +1,13 @@
-export default function Stats() {
+export default function Stats({ todos }) {
+  const total = todos.length;
+  const completed = todos.filter((t) => t.completed).length;
+  const pending = total - completed;
+
   return (
     <div>
-      <p>Total: 0</p>
-      <p>Completadas: 0</p>
-      <p>Pendientes: 0</p>
+      <p>Total: {total}</p>
+      <p>Completadas: {completed}</p>
+      <p>Pendientes: {pending}</p>
     </div>
-  )
+  );
 }
