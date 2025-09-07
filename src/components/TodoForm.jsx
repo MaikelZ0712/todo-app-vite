@@ -1,8 +1,25 @@
-export default function TodoForm() {
+import { useState } from "react";
+
+export default function TodoForm({ addTodo }) {
+  const [text, setText] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (text.trim() === "") return;
+
+    addTodo(text);
+    setText("");
+  };
+
   return (
-    <form>
-      <input type="text" placeholder="Nueva tarea..." />
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Escribe una tarea..."
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
       <button type="submit">Agregar</button>
     </form>
-  )
+  );
 }
