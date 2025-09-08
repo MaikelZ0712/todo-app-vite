@@ -1,12 +1,44 @@
-# React + Vite
+# ✅ Todo List App con React (Vite + Git)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación sencilla de gestión de tareas (Todo List) desarrollada con **React + Vite**, aplicando componentes, props, hooks (`useState`) y programación funcional.  
+Incluye operaciones CRUD, filtros y estadísticas en tiempo real.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
+- ➕ Agregar tareas nuevas con validación.
+- ✅ Marcar tareas como completadas.
+- ❌ Eliminar tareas con confirmación.
+- 🔍 Filtros de visualización:
+  - Todas
+  - Pendientes
+  - Completadas
+- 📊 Estadísticas en tiempo real:
+  - Total de tareas
+  - Tareas completadas
+  - Tareas pendientes
+- 🎨 Estilos modernos y responsive con CSS.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías usadas
+- [React](https://reactjs.org/) (con Vite)
+- [JavaScript ES6+](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [Git y GitHub](https://github.com/)
+- CSS responsive
+
+---
+
+## ⚙️ Instalación y uso
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/USUARIO/NOMBRE-REPO.git
+   cd NOMBRE-REPO
+   npm install
+   npm run dev
+
+
+## 👨‍💻 Autor
+- **Maikel Zapata**  
+- GitHub: [MaikelZ0712](https://github.com/MaikelZ0712)

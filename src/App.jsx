@@ -30,7 +30,7 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  // 🔥 Filtro dinámico
+
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
     if (filter === "pending") return !todo.completed;
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div>
-      <h1>Todo App</h1>
+      <h1>ToDo App</h1>
       <TodoForm addTodo={addTodo} />
 
       {/* Botones de filtro */}
