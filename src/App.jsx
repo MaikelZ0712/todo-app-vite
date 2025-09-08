@@ -34,7 +34,7 @@ function App() {
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
     if (filter === "pending") return !todo.completed;
-    return true; // all
+    return true;
   });
 
   return (
@@ -42,7 +42,7 @@ function App() {
       <h1>ToDo App</h1>
       <TodoForm addTodo={addTodo} />
 
-      {/* Botones de filtro */}
+      
       <div>
         <button onClick={() => setFilter("all")}>Todas</button>
         <button onClick={() => setFilter("pending")}>Pendientes</button>
